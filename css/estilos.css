@@ -1,0 +1,410 @@
+/*==================================================
+    VILLA OLÍMPICA
+    Hoja de estilos principal
+==================================================*/
+
+/*========== RESET ==========*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/*========== BODY ==========*/
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f6f9;
+    color:#333;
+    line-height:1.6;
+}
+
+/*========== HEADER ==========*/
+
+header{
+    background:#083b75;
+    color:#fff;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 60px;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo img{
+    width:200px;
+    height:auto;
+}
+
+/*========== MENÚ ==========*/
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+nav ul li a{
+
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+
+    transition:.3s;
+}
+
+nav ul li a:hover{
+
+    color:#ff9800;
+
+}
+
+.activo{
+
+    color:#ff9800;
+    font-weight:bold;
+
+}
+
+/*========== CONTENIDO ==========*/
+
+main{
+
+    width:90%;
+    max-width:1400px;
+    margin:50px auto;
+
+}
+
+.contenido{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+/*========== COLUMNAS ==========*/
+
+.columna{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.10);
+
+    text-align:center;
+
+}
+
+.logo-principal{
+
+    width:100%;
+    max-width:320px;
+
+}
+
+.imagen-tienda{
+
+    width:100%;
+    border-radius:10px;
+
+}
+
+.columna h1{
+
+    color:#083b75;
+    margin-bottom:20px;
+
+}
+
+.columna p{
+
+    text-align:justify;
+    margin-bottom:18px;
+
+}
+
+.columna h3{
+
+    color:#ff9800;
+
+}
+
+/*========== FOOTER ==========*/
+
+footer{
+
+    background:#083b75;
+    color:white;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:40px;
+
+    padding:40px 60px;
+
+    margin-top:60px;
+
+}
+
+.footer-col h3{
+
+    margin-bottom:20px;
+
+    color:#ff9800;
+
+}
+
+.footer-col p{
+
+    line-height:1.8;
+
+}
+
+.redes{
+
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+
+}
+
+.redes img{
+
+    width:45px;
+
+    transition:.3s;
+
+}
+
+.redes img:hover{
+
+    transform:scale(1.15);
+
+}
+
+/*==================================================
+        MEDIA QUERIES
+==================================================*/
+
+
+/*==========================================
+        TABLET
+==========================================*/
+
+@media screen and (max-width:1023px){
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.contenido{
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+}
+
+footer{
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+}
+
+.grid-productos{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/*==========================================
+        CELULAR
+==========================================*/
+
+@media screen and (max-width:767px){
+
+header{
+
+    padding:20px;
+
+}
+
+.logo img{
+
+    width:140px;
+
+}
+
+nav ul{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.contenido{
+
+    grid-template-columns:1fr;
+
+}
+
+footer{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.redes{
+
+    justify-content:center;
+
+}
+
+.columna{
+
+    padding:20px;
+
+}
+
+.grid-productos{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/*====================================
+        MÁS VENDIDOS
+====================================*/
+
+.productos{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:50px auto;
+
+}
+
+.productos h1{
+
+    text-align:center;
+
+    color:#083b75;
+
+    margin-bottom:40px;
+
+}
+
+.grid-productos{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.producto{
+
+    background:white;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+    text-align:center;
+
+    padding-bottom:20px;
+
+}
+
+.producto:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.producto img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+}
+
+.producto h2{
+
+    margin:20px 15px 10px;
+
+    color:#083b75;
+
+    font-size:20px;
+
+}
+
+.producto h3{
+
+    color:#ff9800;
+
+    margin-bottom:15px;
+
+}
+
+.producto p{
+
+    padding:0 20px;
+
+    text-align:justify;
+
+}
